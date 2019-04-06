@@ -1,0 +1,14 @@
+{
+  "name": "grpc-demo",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "call": "grpcc -i -p protos/hello.proto -a 127.0.0.1:50051"
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.4.0",
+    "grpc": "^1.19.0",
+    "mali": "^0.14.0"
+  }
+}

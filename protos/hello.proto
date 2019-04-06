@@ -1,0 +1,18 @@
+//contains our service definition, along with the messages that our service will be using.
+syntax="proto3";
+
+//defines a service, which is what gRPC will use to expose a set of RPC endpoints
+service Hello {
+    //Unary -  single request and response
+    rpc Echo(EchoRequest) returns (EchoResponse) {};
+}
+
+message EchoRequest {
+    //id [1] used by the server and client to serialize and deserialize the message from the binary format.
+    string message = 1;
+}
+
+message EchoResponse {
+    string message = 1;
+    int32 timestamp = 2;
+}
